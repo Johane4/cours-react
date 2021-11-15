@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+        .heading {
+            color: purple;
+        }
+
+        .principal {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        class HelloReact extends React.Component {
+
+            // On voit ça un peu plus tard. Mais retenez :
+            // On utilisera un constructeur plus tard pour utiliser une autre technique pour 
+            // définir des variables que l'on appelle state
+            // constructor(props) {
+            //     super(props);
+            // }
+
+            // render c'est une méthode de React.Component surchargée
+            // elle s'occupe de render 
+            render() {
+                return (
+                    <p>{this.props.name}</p>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            // attribut cle/valeur == props
+            <HelloReact name="Hello React" />,
+            document.getElementById('root')
+        );
+
+    </script>
+</body>
+
+</html>
