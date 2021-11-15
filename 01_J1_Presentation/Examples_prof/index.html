@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <!-- Librairie React avec DOM virtuel-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <!-- Librairie pour faire le rendu -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <!-- Point d'entrée de l'application -->
+    <div id="root"></div>
+    <script type="text/javascript">
+        // Rendu dans le DOM de deux components hiérarchiques
+        ReactDOM.render(
+            // Création d'un composant 
+            React.createElement('div', {
+                    'style': {
+                        'color': 'red'
+                    }
+                },
+                // définit un élément enfant à l'élément div
+                // const H1 = <h1> Oh Hello React {'hello'} </h1>
+                React.createElement('h1', null, "Oh Hello React !")
+            ),
+            // identifiant root permettant de placer l'élément dans le DOM
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html
